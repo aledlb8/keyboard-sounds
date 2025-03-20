@@ -1,0 +1,1 @@
+g++ -std=c++17 src/*.cpp -Iinclude -o sound.exe -lwinmm -lstdc++fs -lUxTheme -lcomctl32 -mwindows
