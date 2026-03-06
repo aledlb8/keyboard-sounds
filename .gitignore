@@ -1,5 +1,8 @@
 sound.exe
 keyboard_sounds_debug.log
-/build
-/libs
-/.vscode
+.DS_Store
+/build/
+/build-*/
+/cmake-build-*/
+/libs/
+/.vscode/

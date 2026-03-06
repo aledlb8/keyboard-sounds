@@ -57,7 +57,8 @@ This application is built using modern C++17 and integrates several technologies
 
 - Windows 10 or later
 - CMake 3.14 or newer
-- C++17 compatible compiler (e.g., Visual Studio 2019+, MinGW-w64)
+- Ninja
+- C++17 compatible compiler (e.g., Visual Studio 2019+, MinGW-w64, Clang)
 - SFML 3.0 (not included)
 
 ### Setting Up SFML 3
@@ -75,6 +76,15 @@ This application is built using modern C++17 and integrates several technologies
 # Clone the repository
 git clone https://github.com/aledlb8/keyboard-sounds.git
 cd keyboard-sounds
+
+# Configure and build with CMake + Ninja
+cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
+cmake --build build
+```
+
+You can also use the helper script:
+
+```bash
 build.bat
 ```
 
@@ -85,7 +95,7 @@ The executable will be created in the `build` folder (Release configuration). Re
 To run the application:
 ```bash
 cd build
-./keyboard-sounds
+./keyboard-sounds.exe
 ```
 
 ## 🎮 Using Pre-built Releases

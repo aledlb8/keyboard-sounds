@@ -5,7 +5,7 @@ project(keyboard-sounds VERSION 1.0.0 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-if(NOT CMAKE_BUILD_TYPE)
+if(NOT CMAKE_CONFIGURATION_TYPES AND NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE "Release")
 endif()
 
@@ -49,10 +49,6 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
   comctl32
   uxtheme
 )
-
-# — enable Windows .rc resource compilation —
-set(CMAKE_RC_COMPILER_INIT windres)
-enable_language(RC)
 
 # — copy sounds/ into the build folder after each build —
 add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
